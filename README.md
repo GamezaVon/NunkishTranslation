@@ -1,24 +1,5 @@
-# README
+# Nunkish Translator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple translator for the Violet Evergarden's language
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please provide the translation in Nunkish, if you have the Nunkish alphabet you first need to convert it to the latin alphabet
