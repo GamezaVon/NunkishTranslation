@@ -6,4 +6,4 @@ Please provide the translation in Nunkish, if you have the Nunkish alphabet you 
 
 If you like it please rate it, thank you.
 
-Crow Hive
+Crow Hive.
