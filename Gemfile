@@ -28,8 +28,10 @@ gem 'google-translate', '~> 1.1', '>= 1.1.3'
 # gem 'image_processing', '~> 1.2'
 
 # Mechanize
-gem 'mechanize', '~> 2.7', '>= 2.7.5'
+# gem 'mechanize', '~> 2.7', '>= 2.7.5'
 
+# Selenium Webdriver 
+gem 'selenium-webdriver'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
