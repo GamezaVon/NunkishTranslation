@@ -1,10 +1,11 @@
 class History
   def initialize(**cred)
     @username, @password, @database = cred.values_at(:username, :password, :database)
+    p @username, @password, @database
   end
 
   def record()
-    wait = Selenium::WebDriver::Wait.new(:timeout => 30) # seconds
+    wait = Selenium::WebDriver::Wait.new(:timeout => 90) # seconds
     begin
       options = {args: ['start-maximized']} 
       caps = Selenium::WebDriver::Chrome::Options.new(options: options)

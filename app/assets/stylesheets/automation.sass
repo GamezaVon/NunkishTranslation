@@ -3,6 +3,49 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $main-color: #00499C
 $accent-color: #2b52b1
+$nav-color: #3e6bff
+$font-color: white
+body 
+    margin: 0% 0% 0% 0%
+body >    
+    div
+        margin: 0% 10% 0% 10%
 
-body
-    margin: 0% 10% 0% 10%
+nav
+    width: 99vw
+    padding: 1vh 0 1vh 2vh
+    background-color: $main-color
+    a 
+        color: $font-color
+        &:hover
+            color: $nav-color
+
+form >
+    label
+        display: block
+        margin-top: 1%
+    input
+        &[type='text']
+            width: 30%
+            height: 10%
+            border-color: $main-color
+            border-radius: 25px
+            padding: .5% 
+            &:focus
+                outline: none
+                box-shadow: 0 0 3pt 2pt $accent-color
+        &[type='submit']
+            width: 10vw
+            text-align: center
+            margin-top: 1vh
+            color: $font-color
+            background-color: $main-color
+            padding: .5% .5% .5% 3%
+            display: flex
+            border-radius: 25px 4px 25px 4px
+            font-size: 1rem
+            &:hover 
+                background-color: lightblue
+            &:focus 
+                outline: none
+                box-shadow: 0 0 3pt 2pt $accent-color

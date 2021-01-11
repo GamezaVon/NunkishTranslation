@@ -1,12 +1,15 @@
-<h1>Automation of sign in</h1>
-<p>Credentials</p>
+<div>
+    <h1>Tests Automation</h1>
+    <h2>Credentials</h2>
 
-<%= form_with model: @user, url: automation_executeTest_path  do |form| %>
-    <%= form.label :username, "Username" %>
-        <%= form.text_field :username %>
-    <%= form.label :password, "Password" %>
-        <%= form.text_field :password %>
-    <%= form.label :database, "Database" %>
-        <%= form.text_field :database %>
-    <%= form.submit "Execute Test" %>
-<% end %>
+    <%= form_with model: @user, url: automation_executeTest_path  do |form| %>
+        <%= form.label :username, "Username" %>
+            <%= form.text_field :username %>
+        <%= form.label :password, "Password" %>
+            <%= form.text_field :password %>
+        <%= form.label :database, "Database" %>
+            <%= form.text_field :database %>
+        <%= form.submit "Execute Test" %>
+    <% end %>
+</div>
+

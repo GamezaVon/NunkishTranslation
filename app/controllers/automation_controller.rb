@@ -3,9 +3,10 @@ class AutomationController < ApplicationController
   def index
   end
   
-  def executeTest(user)
+  def executeTest(**user)
     # min = History.new params.require(:user).permit(:username, :password, :database)
-    min = History.new(params.permit(:username, :password, :database))
-    # min.record
+    min = History.new()
+    # min = History.new(params.permit(:username, :password, :database))
+    min.record
   end
 end
