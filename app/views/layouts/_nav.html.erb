@@ -1,6 +1,20 @@
 <nav>
-  <a href="/html/">HTML</a> |
-  <a href="/css/">CSS</a> |
-  <a href="/js/">JavaScript</a> |
-  <a href="/python/">Python</a>
+  <div>
+    <button>Didcom IoT</button>
+    <div>
+    <% @navlinks.select {|l| l.iot}.each do |link| %>
+      <a href=<%= link.href%>><%= link.name.capitalize%></a>
+      <% end %>
+    </div>
+  </div>
+  <a href="http://iotadmin.didcom.mx/Account/Login?ReturnUrl=%2f">IoT Admin</a> 
+    <div>
+    <button>MyGeotab</button>
+    <div>
+    <% @navlinks.select {|l| !l.iot}.each do |link| %>
+      <a href=<%= link.href%>><%= link.name.capitalize%></a>
+      <% end %>
+    </div>
+  </div>
+  <a href="https://myadmin.geotab.com/">MyGeotabAdmin</a> 
 </nav>

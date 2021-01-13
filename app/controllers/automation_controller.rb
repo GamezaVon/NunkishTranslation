@@ -1,6 +1,8 @@
 require './app/services/translator'
 class AutomationController < ApplicationController
   def index
+      @navlinks = NavLink.all
+      @users = User.all
   end
   
   def executeTest(**user)

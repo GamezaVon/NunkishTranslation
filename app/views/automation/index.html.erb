@@ -3,13 +3,12 @@
     <h2>Credentials</h2>
 
     <%= form_with model: @user, url: automation_executeTest_path  do |form| %>
+        <%= form.label :database, "Database" %>
+            <%= form.select :database, @users.map {|u| [u.database.capitalize]}.uniq %>
         <%= form.label :username, "Username" %>
             <%= form.text_field :username %>
         <%= form.label :password, "Password" %>
             <%= form.text_field :password %>
-        <%= form.label :database, "Database" %>
-            <%= form.text_field :database %>
         <%= form.submit "Execute Test" %>
     <% end %>
 </div>
-
