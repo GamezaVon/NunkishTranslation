@@ -4,14 +4,21 @@
     <title>Translate</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag asset_path('didcomAutomationIcon.ico')%>
     <meta name="viewport">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+
   </head>
   <body>
-  <header>
-  <%= render "layouts/nav"%>
-  </header>
+    <header>
+      <%= render "layouts/nav"%>
+    </header>
     <%= yield %>
+    <div>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>

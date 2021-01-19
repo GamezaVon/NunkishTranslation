@@ -1,14 +1,22 @@
-<div>
+<div class='container'>
     <h1>Tests Automation</h1>
     <h2>Credentials</h2>
-
-    <%= form_with model: @user, url: automation_executeTest_path  do |form| %>
-        <%= form.label :database, "Database" %>
-            <%= form.select :database, @users.map {|u| [u.database.capitalize]}.uniq %>
-        <%= form.label :username, "Username" %>
-            <%= form.text_field :username %>
-        <%= form.label :password, "Password" %>
-            <%= form.text_field :password %>
-        <%= form.submit "Execute Test" %>
-    <% end %>
+    <div class='row'>
+        <div class='column'>
+            <%= form_with model: @user, url: automation_executeTest_path, :id => 'login'  do |form| %>
+                <%= form.label :database, "Database" %>
+                    <%= form.select :database, @users.map {|u| [u.database.capitalize]}.uniq%>
+                <%= form.label :username, "Username" %>
+                    <%= form.text_field :username %>
+                <%= form.label :password, "Password" %>
+                    <%= form.text_field :password %>
+                <%= form.submit "Execute Test" %>
+            <% end %>
+        </div>
+        <div class='column image'>
+            <%= image_tag 'didcomAutomation.png', style: 'width:300px' %>
+            <div id='map' style='width: 400px; height: 300px;'></div>
+        </div>
+    </div>
+    <%= javascript_pack_tag 'script'%>
 </div>

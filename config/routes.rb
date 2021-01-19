@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   root :to => 'automation#index'
   get 'automation/index'
   post 'automation/executeTest' => 'automation#executeTest'
