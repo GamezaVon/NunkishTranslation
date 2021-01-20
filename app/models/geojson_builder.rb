@@ -4,7 +4,7 @@ class GeojsonBuilder
         type: "Feature",
         geometry: {
             type: "Point",
-            coordinates: [event.longitude, event.latitude] # this part is tricky
+            coordinates: [event.longitude, event.latitude]
         },
             properties: {
                 title: event.title,

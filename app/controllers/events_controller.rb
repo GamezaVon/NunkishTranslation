@@ -6,17 +6,18 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @geojson = Array.new
-    build_geojson(event, @geojson)
-  end
+    build_geojson(@events, @geojson)
 
-  respond_to do |format|
-      format.html 
-      format.json {render json: @geojson}
+    respond_to do |format|
+        format.html 
+        format.json {render json: @geojson}
+    end
   end
 
   def build_geojson(events, geojson)
+    geo = GeojsonBuilder.new
     events.each do |event|
-      geojson << GeojsonBuilde.build_event(event)
+      geojson << geo.build_event(event, geojson)
     end
   end
 
