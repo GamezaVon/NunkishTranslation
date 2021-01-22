@@ -1,9 +1,10 @@
 class EventsController < ApplicationController
   # before_action :set_event, only: [:show, :edit, :update, :destroy]
-
+  @@navlinks = NavLink.all
   # GET /events
   # GET /events.json
   def index
+    @navlinks = NavLink.all
     @events = Event.all
     @geojson = Array.new
     build_geojson(@events, @geojson)

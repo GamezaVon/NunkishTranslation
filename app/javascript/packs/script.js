@@ -12,7 +12,16 @@
 //     .then(response => response.text())
 //     .then(body => console.log(body))
 
+document.getElementById("database").onchange = function() {myFunction()};
+function myFunction() {
+    var x = document.getElementById("database");
+    x.value = x.value.toUpperCase();
+    var x = document.getElementById("username");
+    x.value = 'Username'
+    var x = document.getElementById("password");
+    x.value = 'password'
 
+  }
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWNvY29saXRvIiwiYSI6ImNrazMwdnptYjBkdXEycGszeHQ1MTZraXoifQ.z5OK-hCet8ckoffG5pBn8Q';
 var map = new mapboxgl.Map({
