@@ -11,15 +11,15 @@
 //     })
 //     .then(response => response.text())
 //     .then(body => console.log(body))
+data = JSON.parse(document.getElementsByClassName("users")[0].getAttribute("data-users"))
+myFunction();
 
 document.getElementById("database").onchange = function() {myFunction()};
 function myFunction() {
-    var x = document.getElementById("database");
-    x.value = x.value.toUpperCase();
-    var x = document.getElementById("username");
-    x.value = 'Username'
-    var x = document.getElementById("password");
-    x.value = 'password'
+    var db = document.getElementById("database").value.toLowerCase();
+    let credentials = data.find(user => user.database === db);
+    var x = document.getElementById("username").value = credentials.username;
+    var x = document.getElementById("password").value = credentials.password;
 
   }
 

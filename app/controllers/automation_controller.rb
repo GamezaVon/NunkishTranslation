@@ -6,10 +6,15 @@ class AutomationController < ApplicationController
     @users = User.all
   end
   
-  def executeTest(**user)
+  def executeTest
     # min = History.new params.require(:user).permit(:username, :password, :database)
-    min = History.new()
-    # min = History.new(params.permit(:username, :password, :database))
+    # min = History.new(params)
+    min = History.new(user_params)
     min.record
+  end
+
+  private 
+  def user_params
+    params.permit(:password, :username, :database, :authenticity_token, :commit)
   end
 end

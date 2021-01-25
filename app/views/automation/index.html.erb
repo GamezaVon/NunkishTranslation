@@ -7,9 +7,10 @@
                 <%= form.label :database, "Database" %>
                     <%= form.select :database, @users.map {|u| [u.database.capitalize]}.uniq%>
                 <%= form.label :username, "Username" %>
-                    <%= form.text_field :username %>
+                    <%# <%= form.select :username%>
+                    <%= form.text_field :username, :readonly => true %>
                 <%= form.label :password, "Password" %>
-                    <%= form.text_field :password %>
+                    <%= form.password_field :password, :readonly => true %>
                 <%= form.submit "Execute Test" %>
             <% end %>
         </div>
@@ -18,5 +19,7 @@
             <div id='map' style='width: 400px; height: 300px;'></div>
         </div>
     </div>
+    <%= content_tag :div, class: "users", data: {users: @users} do %>
+    <% end%>
     <%= javascript_pack_tag 'script'%>
 </div>

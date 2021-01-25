@@ -1,6 +1,6 @@
 class History
-  def initialize(**cred)
-    @username, @password, @database = cred.values_at(:username, :password, :database)
+  def initialize(*cred)
+    @username, @password, @database = cred[0].values_at(:username, :password, :database)
     p @username, @password, @database
   end
 
