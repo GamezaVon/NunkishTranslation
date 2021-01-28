@@ -11,13 +11,13 @@ $height-control: 12%
 *
     box-sizing: border-box
 
-body 
+body
     margin: 0% 0% 0% 0%
     background: white
     font-family: 'Open Sans', sans-serif
     min-height: 100vh
 
-footer 
+footer
     background-color: $main-color
     color: $font-color
     text-decoration: none
@@ -31,14 +31,13 @@ footer
         > a
             color: $font-color
             text-decoration: none
-            &:visited 
+            &:visited
                 color: $font-color
-
 
 nav
     width: 100vw
     background-color: $main-color
-    a 
+    a
         color: $font-color
         text-decoration: none
         &:hover
@@ -52,7 +51,7 @@ nav
             padding: 16px
             font-size: 16px
             border: none
-        > div 
+        > div
             display: none
             position: absolute
             background-color: #f1f1f1
@@ -64,24 +63,23 @@ nav
                 padding: 12px 16px
                 text-decoration: none
                 display: block
-                &:hover 
+                &:hover
                     background-color: #ddd
         &:hover
             button
                 background-color: $accent-color
-            >div 
-                display: block  
+            >div
+                display: block
         &:focus
             outline: none
 
-
-form 
+form
     >
         *
             font-size: 1rem
             &:focus
-                    outline: none
-                    box-shadow: 0 0 3pt 2pt $accent-color
+                outline: none
+                box-shadow: 0 0 3pt 2pt $accent-color
         label
             display: block
             margin: 1% 0 .5% 0
@@ -92,7 +90,7 @@ form
                 height: $height-control
                 border-color: $main-color
                 border-radius: 25px
-                padding: .5% 
+                padding: .5%
             &[type='submit']
                 width: 10vw
                 text-align: center
@@ -101,12 +99,12 @@ form
                 border: 2px solid $main-color
                 padding: .5% .5% .5% 14%
                 display: flex
-                border-radius: 15px 15px 15px 15px 
+                border-radius: 15px 15px 15px 15px
                 font-size: 1rem
-                margin: 1rem 0 0 0 
+                margin: 1rem 0 0 0
                 width: $width-control
                 height: $height-control
-                &:hover 
+                &:hover
                     background-color: lightblue
                     color: black
         select
@@ -115,7 +113,7 @@ form
             border-color: $main-color
             border-radius: 25px
             padding: .5% .5% .5% .5%
-            &:focus 
+            &:focus
                 outline: none
 .container
     min-height: 100%
@@ -132,11 +130,39 @@ form
     padding: 10px
     height: 300px
 
-.image 
+.image
     padding: 0% 0% 0% 2%
 .column.image
     > img
         margin-left: 5%
 
-#map 
+#map
     margin-top: 10%
+
+.breathe
+    margin-top: 50px
+    margin-left: 200px
+    width: 100px
+    height: 100px
+    background-color: red
+    position: relative
+    animation: breathing 8s
+    animation-iteration-count: infinite
+
+@keyframes breathing 
+    0% 
+        background-color: red 
+        left: 150px
+        top: 0px
+    50% 
+        background-color: yellow 
+        left: 300px 
+        top: 259.8px
+    87.5% 
+        background-color: blue
+        left: 0px 
+        top: 259.8px
+    100%
+        background-color: red 
+        left: 150px 
+        top: 0px
